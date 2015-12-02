@@ -10,4 +10,12 @@
 
 @interface ZBJKeychain : NSObject
 
+- (id)initWithService:(NSString *) service_ withGroup:(NSString*)group_;
+
+- (BOOL)setObject:(NSData *)data forKey:(NSString *)key;
+- (BOOL)updateObject:(NSData *)data forKey:(NSString *)key;
+- (BOOL)removeObjectForKey:(NSString*)key;
+- (NSData*)objectForKey:(NSString*)key;
+
+
 @end

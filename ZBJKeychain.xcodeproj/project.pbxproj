@@ -15,6 +15,7 @@
 		329329611C0F09DA0080FBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3293295F1C0F09DA0080FBB3 /* LaunchScreen.storyboard */; };
 		3293296C1C0F09DA0080FBB3 /* ZBJKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3293296B1C0F09DA0080FBB3 /* ZBJKeychainTests.m */; };
 		329329771C0F09DA0080FBB3 /* ZBJKeychainUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 329329761C0F09DA0080FBB3 /* ZBJKeychainUITests.m */; };
+		329329861C0F10EF0080FBB3 /* ZBJKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 329329851C0F10EF0080FBB3 /* ZBJKeychain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		329329721C0F09DA0080FBB3 /* ZBJKeychainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZBJKeychainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		329329761C0F09DA0080FBB3 /* ZBJKeychainUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJKeychainUITests.m; sourceTree = "<group>"; };
 		329329781C0F09DA0080FBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		329329841C0F10EF0080FBB3 /* ZBJKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBJKeychain.h; sourceTree = "<group>"; };
+		329329851C0F10EF0080FBB3 /* ZBJKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBJKeychain.m; sourceTree = "<group>"; };
+		329329871C0F1A640080FBB3 /* ZBJKeychain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ZBJKeychain.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		329329501C0F09DA0080FBB3 /* ZBJKeychain */ = {
 			isa = PBXGroup;
 			children = (
+				329329871C0F1A640080FBB3 /* ZBJKeychain.entitlements */,
 				329329541C0F09DA0080FBB3 /* AppDelegate.h */,
 				329329551C0F09DA0080FBB3 /* AppDelegate.m */,
 				329329571C0F09DA0080FBB3 /* ViewController.h */,
@@ -110,6 +115,8 @@
 				3293295F1C0F09DA0080FBB3 /* LaunchScreen.storyboard */,
 				329329621C0F09DA0080FBB3 /* Info.plist */,
 				329329511C0F09DA0080FBB3 /* Supporting Files */,
+				329329841C0F10EF0080FBB3 /* ZBJKeychain.h */,
+				329329851C0F10EF0080FBB3 /* ZBJKeychain.m */,
 			);
 			path = ZBJKeychain;
 			sourceTree = "<group>";
@@ -207,6 +214,12 @@
 				TargetAttributes = {
 					3293294D1C0F09DA0080FBB3 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = GB7H6UHA26;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					329329661C0F09DA0080FBB3 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -272,6 +285,7 @@
 			files = (
 				329329591C0F09DA0080FBB3 /* ViewController.m in Sources */,
 				329329561C0F09DA0080FBB3 /* AppDelegate.m in Sources */,
+				329329861C0F10EF0080FBB3 /* ZBJKeychain.m in Sources */,
 				329329531C0F09DA0080FBB3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZBJKeychain/ZBJKeychain.entitlements;
 				INFOPLIST_FILE = ZBJKeychain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhubaijia.ZBJKeychain;
@@ -424,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZBJKeychain/ZBJKeychain.entitlements;
 				INFOPLIST_FILE = ZBJKeychain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhubaijia.ZBJKeychain;
